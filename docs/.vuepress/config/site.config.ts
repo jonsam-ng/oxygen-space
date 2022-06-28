@@ -2,23 +2,22 @@
  *                                 页面配置【建站自定义】
  ******************************************************************************************/
 
-export const siteName = "Fancy Note Starter";
+export const siteName = "氧气空间";
 
-export const siteDesc =
-  "A simple starter to create note site using vuepress and github pages.";
+export const siteDesc = "三五知己相逢，几许墨香共享。";
 
 // 是否使用 github pages 的自定义域名
-export const useCustomDomainName = false;
-export const customDomainName = "template.jonsam.site";
+export const useCustomDomainName = true;
+export const customDomainName = "ox.jonsam.site";
 
-export const siteKeywords = "笔记模板,静态站点";
+export const siteKeywords = "阅读,书籍,书籍下载,书籍推荐";
 
 // 同时修改 `docs/.vuepress/styles/palette.styl` 中 `$accentColor`
-export const siteThemeColor = "#033643";
+export const siteThemeColor = "#DC5B68";
 
 export const siteIconFont = "//at.alicdn.com/t/font_3314748_9xij1pv3h4i.css";
 
-export const siteRepo = "fancy-note-starter";
+export const siteRepo = "jonsam-ng/oxygen-space";
 
 export const siteLicense = "MIT";
 

@@ -12,17 +12,17 @@ node scripts/build.js
 cd docs/.vuepress/dist
 
 # deploy to github pages
-# echo 'note-template.jonsam.site' > CNAME
+echo 'ox.jonsam.site' > CNAME
 
 git config --global user.name "wuqingshan"
 git config --global user.email "wuqingshan@xylink.com"
 
 if [ -z "$GITHUB_TOKEN" ]; then
   msg='deploy: deploy to pages'
-  githubUrl=git@github.com:jonsam-ng/fancy-note-starter.git
+  githubUrl=git@github.com:jonsam-ng/oxygen-space.git
 else
   msg='deploy: auto deploy by github actions'
-  githubUrl=https://jonsam-ng:${GITHUB_TOKEN}@github.com/jonsam-ng/fancy-note-starter.git
+  githubUrl=https://jonsam-ng:${GITHUB_TOKEN}@github.com/jonsam-ng/oxygen-space.git
 fi
 git init
 git add -A

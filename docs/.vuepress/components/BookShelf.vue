@@ -105,6 +105,9 @@ export default {
 .book .album {
   width: 300px;
 }
+.book .album img {
+  width: 100%;
+}
 .book .content {
   flex: 1;
   padding-left: 35px;

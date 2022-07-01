@@ -15,7 +15,7 @@ tags:
 album=""
 title="example"
 author=""
-authorLink=“”
+authorLink=""
 intro=""
 :tags="['', '']"
 publisher=""

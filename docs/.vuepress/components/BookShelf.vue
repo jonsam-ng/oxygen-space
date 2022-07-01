@@ -77,7 +77,7 @@ export default {
   },
   computed: {
     computedAuthorLink() {
-      return this.authorLink ?? `https://zh.wikipedia.org/wiki/${this.author}`;
+      return this.authorLink ?? `https://cn.bing.com/search?q=${this.author}`;
     },
     computedDoubanLink() {
       return this.douban ?? `https://www.douban.com/search?q=${this.title}`;

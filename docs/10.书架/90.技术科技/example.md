@@ -1,9 +1,8 @@
 ---
 title: example
 date: 2022-07-01 08:50:41
-permalink: /pages/2510b3/
+permalink: /book/2510b3/
 categories:
-  - 书架
   - 技术科技
 tags:
   - 
@@ -14,8 +13,9 @@ tags:
 
 <BookShelf
 album=""
-title=""
+title="example"
 author=""
+authorLink=“”
 intro=""
 :tags="['', '']"
 publisher=""

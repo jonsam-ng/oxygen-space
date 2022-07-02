@@ -45,8 +45,8 @@
         </li>
       </ul>
       <div class="actions">
-        <div role="button" class="main" @click="onDownload">下载</div>
-        <div role="button" @click="onGoDouban">豆瓣</div>
+        <a role="button" class="main" :href="link" target="_blank">下载</a>
+        <a role="button" :href="computedDoubanLink" target="_blank">豆瓣</a>
       </div>
     </div>
   </div>
@@ -106,12 +106,6 @@ export default {
     },
   },
   methods: {
-    onDownload() {
-      window.open(this.link);
-    },
-    onGoDouban() {
-      window.open(this.computedDoubanLink);
-    },
     onBlbumError() {
       this.album = "/img/album.webp";
     },
@@ -129,8 +123,8 @@ export default {
   justify-content: flex-start;
   flex-wrap: nowrap;
   padding: 40px 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 .book .album {
   width: 300px;
@@ -202,7 +196,7 @@ export default {
 .actions {
   margin-top: 20px;
 }
-.actions div[role="button"] {
+.actions a[role="button"] {
   appearance: none;
   display: inline-block;
   border-radius: 16px;
@@ -215,6 +209,7 @@ export default {
   font-weight: bold;
   background-color: transparent;
   border: 1px solid #dc5b68;
+  text-decoration: none;
 }
 .actions .main[role="button"] {
   background-color: #dc5b68;

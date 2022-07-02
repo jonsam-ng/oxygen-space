@@ -69,7 +69,7 @@ export default {
     lang: { type: String, default: "未知" },
     pages: { type: Number, default: 0 },
     tags: { type: Array, default: () => [] },
-    link: { type: String, default: "#" },
+    link: { type: String, default: location.href },
     douban: { type: String },
   },
   data(instance) {

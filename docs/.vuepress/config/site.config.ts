@@ -37,7 +37,7 @@ export const siteBlogger = {
 
 export const siteFooter = {
   createYear: 2022,
-  copyrightInfo: `${siteName} | Template by <a href="https://jonsam-ng.github.io/fancy-note-starter/">Fancy Note Starter</a> | Made by <a href=${personalLink} target="_blank">${siteAuthor.name}</a> with ❤`,
+  copyrightInfo: `${siteName} | Template by <a href="https://jonsam-ng.github.io/fancy-note-starter/">Fancy Note Starter</a> | Made by <a href=${personalLink} target="_blank">${siteAuthor.name}</a> with ❤<br /><span>本站所有书籍信息及简介均来自互联网，如页面侵犯到著作人及版权方，本站不负一切责任！</span></span>`,
 };
 
 export const siteBase = useCustomDomainName ? "/" : `/${siteRepo}/`;

@@ -1,15 +1,21 @@
 <template>
   <div class="book">
     <div class="album">
-      <img :src="album" @dragstart.prevent="" />
+      <img :src="album" @dragstart.prevent="" @error="onBlbumError" />
     </div>
     <div class="content">
       <h1 class="title">{{ title }}</h1>
       <div class="authorLine">
-        <img :src="avatar" class="avatar" @click.prevent="" /><a
+        <img
+          :src="avatar"
+          class="avatar"
+          @click.prevent=""
+          @error="onAvatarError"
+        /><a
           :href="computedAuthorLink"
           target="_blank"
           class="author"
+          @click.prevent=""
           >{{ author }}</a
         >
       </div>
@@ -89,6 +95,12 @@ export default {
     },
     onGoDouban() {
       window.open(this.computedDoubanLink);
+    },
+    onBlbumError() {
+      this.album = "/img/album.webp";
+    },
+    onAvatarError() {
+      this.avatar = "/img/avatar.webp";
     },
   },
 };

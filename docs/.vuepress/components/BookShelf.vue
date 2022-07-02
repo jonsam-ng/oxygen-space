@@ -101,6 +101,8 @@ export default {
   justify-content: flex-start;
   flex-wrap: nowrap;
   padding: 40px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 .book .album {
   width: 300px;
@@ -190,5 +192,16 @@ export default {
   background-color: #dc5b68;
   color: #fff;
   border: none;
+}
+@media screen and (max-width: 600px) {
+  .book {
+    flex-direction: column;
+  }
+  .book .album {
+    width: 100%;
+  }
+  .book .content {
+    padding-left: 0;
+  }
 }
 </style>

@@ -71,6 +71,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     footer: siteFooter,
     // 自定义html(广告)模块
     htmlModules,
+    extendFrontmatter: {
+      titleTag: "",
+    },
   },
   head,
   plugins,
@@ -93,8 +96,5 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       global: true,
       process: true,
     },
-  },
-  extendFrontmatter: {
-    titleTag: "",
   },
 });

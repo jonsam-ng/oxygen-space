@@ -2,10 +2,11 @@
 title: example
 date: 2022-07-01 08:50:41
 permalink: /book/2510b3/
-categories:
+categories: 
   - 技术科技
-tags:
+tags: 
   - 
+titleTag: 
 ---
 
 
@@ -13,11 +14,8 @@ tags:
 
 <BookShelf
 album=""
-title="example"
 author=""
-authorLink=""
 intro=""
-:tags="['', '']"
 publisher=""
 lang="中文"
 :pages="0"

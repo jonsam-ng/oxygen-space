@@ -4,7 +4,7 @@
       <img :src="album" @dragstart.prevent="false" @error="onBlbumError" />
     </div>
     <div class="content">
-      <h1 class="title">{{ title }}</h1>
+      <h1 class="title">{{ computedTitle }}</h1>
       <div class="authorLine">
         <img
           :src="avatar"
@@ -31,8 +31,16 @@
         </li>
         <li>
           <span class="key">标签</span>
-          <ul class="tags" v-for="tag in tags" :key="tag">
+          <ul class="tags" v-for="tag in computedTags" :key="tag">
             <a target="_blank" :href="`/tags/?tag=${tag}`">{{ tag }}</a>
+          </ul>
+        </li>
+        <li>
+          <span class="key">分类</span>
+          <ul class="tags" v-for="cate in computedCategories" :key="cate">
+            <a target="_blank" :href="`/categories/?category=${cate}`">{{
+              cate
+            }}</a>
           </ul>
         </li>
       </ul>
@@ -53,7 +61,7 @@ export default {
       default:
         "https://cdn.jsdelivr.net/gh/jonsam-ng/image-hosting@master/oxygen-space/image.6g3djpefjk80.webp",
     },
-    title: String,
+    title: { type: String },
     avatar: {
       type: String,
       default:
@@ -70,7 +78,8 @@ export default {
     publisher: { type: String, default: "未知" },
     lang: { type: String, default: "未知" },
     pages: { type: Number, default: 0 },
-    tags: { type: Array, default: () => [] },
+    tags: { type: Array },
+    categories: { type: Array },
     link: { type: String, default: location.href },
     douban: { type: String },
   },
@@ -82,7 +91,18 @@ export default {
       return this.authorLink || `https://cn.bing.com/search?q=${this.author}`;
     },
     computedDoubanLink() {
-      return this.douban || `https://www.douban.com/search?q=${this.title}`;
+      return (
+        this.douban || `https://www.douban.com/search?q=${this.computedTitle}`
+      );
+    },
+    computedTags() {
+      return this.tags ?? this.$page.frontmatter.tags ?? [];
+    },
+    computedCategories() {
+      return this.categories ?? this.$page.frontmatter.categories ?? [];
+    },
+    computedTitle() {
+      return this.title ?? this.$page.frontmatter.title ?? "";
     },
   },
   methods: {

@@ -80,7 +80,7 @@ export default {
     pages: { type: Number, default: 0 },
     tags: { type: Array },
     categories: { type: Array },
-    link: { type: String, default: location.href },
+    link: { type: String },
     douban: { type: String },
   },
   data(instance) {

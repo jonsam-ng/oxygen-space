@@ -14,11 +14,11 @@ titleTag:
 
 <BookShelf
 album=""
+:pages="0"
 author=""
 intro=""
 publisher=""
 lang="中文"
-:pages="0"
 link=""
 douban=""
 />

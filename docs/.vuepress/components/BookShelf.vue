@@ -47,6 +47,12 @@
       <div class="actions">
         <a role="button" class="main" :href="link" target="_blank">下载</a>
         <a role="button" :href="computedDoubanLink" target="_blank">豆瓣</a>
+        <a
+          role="button"
+          :href="`https://sobooks.net/search/${this.computedTitle}`"
+          target="_blank"
+          >SoBooks.net</a
+        >
       </div>
     </div>
   </div>
@@ -204,8 +210,7 @@ export default {
   font-size: 14px;
   outline: none;
   cursor: pointer;
-  margin-right: 36px;
-  letter-spacing: 4px;
+  margin-right: 16px;
   font-weight: bold;
   background-color: transparent;
   border: 1px solid #dc5b68;

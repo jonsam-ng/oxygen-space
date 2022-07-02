@@ -1,7 +1,7 @@
 <template>
   <div class="book">
     <div class="album">
-      <img :src="album" @dragstart.prevent="" @error="onBlbumError" />
+      <img :src="album" @dragstart.prevent="false" @error="onBlbumError" />
     </div>
     <div class="content">
       <h1 class="title">{{ title }}</h1>
@@ -9,15 +9,11 @@
         <img
           :src="avatar"
           class="avatar"
-          @click.prevent=""
+          @click.prevent="false"
           @error="onAvatarError"
-        /><a
-          :href="computedAuthorLink"
-          target="_blank"
-          class="author"
-          @click.prevent=""
-          >{{ author }}</a
-        >
+        /><a :href="computedAuthorLink" target="_blank" class="author">{{
+          author
+        }}</a>
       </div>
       <p class="intro">{{ intro }}</p>
       <ul class="detail">

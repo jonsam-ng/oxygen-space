@@ -64,6 +64,12 @@
       >
       <a
         role="button"
+        :href="`https://www.ximalaya.com/search/${this.computedTitle}`"
+        target="_blank"
+        >喜马拉雅</a
+      >
+      <a
+        role="button"
         :href="`https://cloud.yuedu.pro/?search_text=${this.computedTitle}&submit=#/searchResult`"
         target="_blank"
         >阅读链</a

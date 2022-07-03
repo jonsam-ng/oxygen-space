@@ -19,12 +19,31 @@
 
 [关于 | 氧气空间](https://ox.jonsam.site/about/)。
 
+## 开发
+
+### 启动
+
+```bash
+git clone https://github.com/jonsam-ng/oxygen-space.git
+cd oxygen-space
+npm i -g pnpm
+pnpm dev
+```
+
+### 打包
+
+```bash
+pnpm build
+```
+
 ## 友链
 
 - [Fancy FE](https://source.jonsam.site/)
 - [Fancy ML](https://ml.jonsam.site/)
 
 ## 关于我
+
+[关于 - 夏夜•梦无眠](https://www.jonsam.site/about/)
 
 ## TODO
 

@@ -1,11 +1,11 @@
 ---
 home: true
-# heroImage: /img/web.png
 heroText: 氧气空间
 tagline: 三五知己相逢，几许墨香共享。
 actionText: 进入书架 →
 actionLink: /cate/
-bannerBg: auto # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
+bannerBg: "background: url(https://cdn.staticaly.com/gh/jonsam-ng/image-hosting@master/oxygen-space/image.5oa3g8fkync0.webp) 37% 44%"
+# bannerBg: "background: url(https://cdn.staticaly.com/gh/jonsam-ng/image-hosting@master/oxygen-space/image.ut7ogpyo9cg.webp) 37% 44%"
 
 features: # 可选的
   # - title: 书架

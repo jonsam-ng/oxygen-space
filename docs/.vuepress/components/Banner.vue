@@ -73,4 +73,17 @@ export default {
   font-size: 2rem;
   margin: 0;
 }
+@media screen and (max-width: 600px) {
+  .banner {
+    padding: 0;
+    gap: 0;
+    flex-direction: column !important;
+  }
+  .right {
+    text-align: left !important;
+    border-left: 5px solid #ccc;
+    padding-left: 1rem;
+    align-items: flex-start !important;
+  }
+}
 </style>

@@ -23,6 +23,7 @@ export default [
       { text: "关于", link: "/about/" },
       // generate by slidev
       { text: "幻灯片", link: `/slides/#/1` },
+      { text: "鸠摩搜书", link: `https://www.jiumodiary.com/` },
     ],
   },
   { text: "博客", link: "https://www.jonsam.site" },

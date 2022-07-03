@@ -1,65 +1,109 @@
 <template>
-  <div class="book">
-    <div class="album">
-      <img :src="album" @dragstart.prevent="false" @error="onBlbumError" />
+  <div class="bookWrapper">
+    <div class="book">
+      <div class="album">
+        <img :src="album" @dragstart.prevent="false" @error="onBlbumError" />
+      </div>
+      <div class="content">
+        <h1 class="title">{{ computedTitle }}</h1>
+        <div class="authorLine">
+          <img
+            :src="avatar"
+            class="avatar"
+            @click.prevent="false"
+            @error="onAvatarError"
+          /><a :href="computedAuthorLink" target="_blank" class="author">{{
+            author
+          }}</a>
+        </div>
+        <p class="intro">{{ intro }}</p>
+        <ul class="detail">
+          <li>
+            <span class="key">出版商</span>
+            <span class="value">{{ publisher }}</span>
+          </li>
+          <li>
+            <span class="key">语言</span>
+            <span class="value">{{ lang }}</span>
+          </li>
+          <li>
+            <span class="key">页数</span>
+            <span class="value">{{ pages }}页</span>
+          </li>
+          <li>
+            <span class="key">标签</span>
+            <ul class="tags" v-for="tag in computedTags" :key="tag">
+              <a target="_blank" :href="`/tags/?tag=${tag}`">{{ tag }}</a>
+            </ul>
+          </li>
+          <li>
+            <span class="key">分类</span>
+            <ul class="tags" v-for="cate in computedCategories" :key="cate">
+              <a target="_blank" :href="`/categories/?category=${cate}`">{{
+                cate
+              }}</a>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="content">
-      <h1 class="title">{{ computedTitle }}</h1>
-      <div class="authorLine">
-        <img
-          :src="avatar"
-          class="avatar"
-          @click.prevent="false"
-          @error="onAvatarError"
-        /><a :href="computedAuthorLink" target="_blank" class="author">{{
-          author
-        }}</a>
-      </div>
-      <p class="intro">{{ intro }}</p>
-      <ul class="detail">
-        <li>
-          <span class="key">出版商</span>
-          <span class="value">{{ publisher }}</span>
-        </li>
-        <li>
-          <span class="key">语言</span>
-          <span class="value">{{ lang }}</span>
-        </li>
-        <li>
-          <span class="key">页数</span>
-          <span class="value">{{ pages }}页</span>
-        </li>
-        <li>
-          <span class="key">标签</span>
-          <ul class="tags" v-for="tag in computedTags" :key="tag">
-            <a target="_blank" :href="`/tags/?tag=${tag}`">{{ tag }}</a>
-          </ul>
-        </li>
-        <li>
-          <span class="key">分类</span>
-          <ul class="tags" v-for="cate in computedCategories" :key="cate">
-            <a target="_blank" :href="`/categories/?category=${cate}`">{{
-              cate
-            }}</a>
-          </ul>
-        </li>
-      </ul>
-      <div class="actions">
-        <a role="button" class="main" :href="link" target="_blank">下载</a>
-        <a role="button" :href="computedDoubanLink" target="_blank">豆瓣</a>
-        <a
-          role="button"
-          :href="`https://sobooks.net/search/${this.computedTitle}`"
-          target="_blank"
-          >SoBooks.net</a
-        >
-        <a
-          role="button"
-          :href="`https://search.bilibili.com/video?keyword=${this.computedTitle}`"
-          target="_blank"
-          >Bilibili</a
-        >
-      </div>
+    <div class="actions">
+      <a role="button" class="main" :href="link" target="_blank">下载</a>
+      <a role="button" :href="computedDoubanLink" target="_blank">豆瓣</a>
+      <a
+        role="button"
+        :href="`https://sobooks.net/search/${this.computedTitle}`"
+        target="_blank"
+        >SoBooks.net</a
+      >
+      <a
+        role="button"
+        :href="`https://search.bilibili.com/video?keyword=${this.computedTitle}`"
+        target="_blank"
+        >Bilibili</a
+      >
+      <a
+        role="button"
+        :href="`https://cloud.yuedu.pro/?search_text=${this.computedTitle}&submit=#/searchResult`"
+        target="_blank"
+        >阅读链</a
+      >
+      <a
+        role="button"
+        :href="`https://www.shuge.org/?s=${this.computedTitle}`"
+        target="_blank"
+        >书格</a
+      >
+      <a
+        role="button"
+        :href="`https://www.google.com/search?q=${this.computedTitle}&tbm=bks`"
+        target="_blank"
+        >Google</a
+      >
+      <a
+        role="button"
+        :href="`https://libgen.rs/search.php?&req=${this.computedTitle}`"
+        target="_blank"
+        >Libgen.rs</a
+      >
+      <a
+        role="button"
+        :href="`https://search.dangdang.com/?key=${this.computedTitle}`"
+        target="_blank"
+        >当当</a
+      >
+      <a
+        role="button"
+        :href="`https://www.amazon.cn/s?k=${this.computedTitle}&enc=utf-8`"
+        target="_blank"
+        >亚马逊</a
+      >
+      <a
+        role="button"
+        :href="`https://search.jd.com/Search?keyword=${this.computedTitle}`"
+        target="_blank"
+        >京东</a
+      >
     </div>
   </div>
 </template>
@@ -129,14 +173,16 @@ export default {
 </script>
 
 <style scoped>
+.bookWrapper {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 40px 0;
+}
 .book {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: nowrap;
-  padding: 40px 0;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
 }
 .book .album {
   width: 300px;
@@ -223,6 +269,7 @@ export default {
   background-color: transparent;
   border: 1px solid #dc5b68;
   text-decoration: none;
+  margin-bottom: 8px;
 }
 .actions .main[role="button"] {
   background-color: #dc5b68;

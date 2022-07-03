@@ -53,6 +53,12 @@
           target="_blank"
           >SoBooks.net</a
         >
+        <a
+          role="button"
+          :href="`https://search.bilibili.com/video?keyword=${this.computedTitle}`"
+          target="_blank"
+          >Bilibili</a
+        >
       </div>
     </div>
   </div>
@@ -161,6 +167,8 @@ export default {
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
+  word-break: break-word;
+  flex: 1;
 }
 .book .intro {
   font-size: 14px;

@@ -220,7 +220,6 @@ export default {
   cursor: pointer;
   text-decoration: none;
   word-break: break-word;
-  flex: 1;
 }
 .book .intro {
   font-size: 14px;

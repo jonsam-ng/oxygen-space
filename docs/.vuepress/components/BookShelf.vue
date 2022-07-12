@@ -48,7 +48,9 @@
       </div>
     </div>
     <div class="actions">
-      <a role="button" class="main" :href="link" target="_blank">下载</a>
+      <a role="button" class="main" :href="link" target="_blank"
+        >下载{{ link ? "" : "(暂无资源)" }}</a
+      >
       <a role="button" :href="computedDoubanLink" target="_blank">豆瓣</a>
       <a
         role="button"
@@ -281,7 +283,7 @@ export default {
   color: #fff;
   border: none;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .book {
     flex-direction: column;
   }

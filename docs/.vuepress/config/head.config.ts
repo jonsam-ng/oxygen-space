@@ -35,7 +35,7 @@ export default [
     "link",
     {
       rel: "mask-icon",
-      href: "/icons/safari-pinned-tab.svg",
+      href: "/img/android-chrome-192x192.png",
       color: "#3eaf7c",
     },
   ],
@@ -43,7 +43,7 @@ export default [
     "meta",
     {
       name: "msapplication-TileImage",
-      content: "/icons/msapplication-icon-144x144.png",
+      content: "/img/android-chrome-192x192.png",
     },
   ],
   ["meta", { name: "msapplication-TileColor", content: "#000000" }],

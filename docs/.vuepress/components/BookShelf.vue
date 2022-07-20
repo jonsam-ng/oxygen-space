@@ -156,7 +156,10 @@ export default {
     },
     computedDoubanLink() {
       return (
-        this.douban || `https://www.douban.com/search?q=${this.computedTitle}`
+        (this.douban && this.douban.indexOf("http") === -1
+          ? `https://book.douban.com/subject/${this.douban}/`
+          : this.douban) ||
+        `https://www.douban.com/search?q=${this.computedTitle}`
       );
     },
     computedTags() {
@@ -183,7 +186,6 @@ export default {
 <style scoped>
 .bookWrapper {
   border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
   padding: 40px 0;
 }
 .book {

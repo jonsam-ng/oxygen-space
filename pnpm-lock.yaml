@@ -26,7 +26,7 @@ specifiers:
   vuepress-plugin-smplayer: '1'
   vuepress-plugin-thirdparty-search: ^1.0.2
   vuepress-plugin-zooming: ^1.1.8
-  vuepress-theme-vdoing: ^1.12.8
+  vuepress-theme-vdoing: ^1.11.2
   yamljs: ^0.3.0
 
 dependencies:
@@ -11174,7 +11174,7 @@ packages:
     dev: true
 
   /vuepress-plugin-reading-progress/1.0.10:
-    resolution: {integrity: sha512-7OxcjNEDf9gqFTns0YnXrqPnTRlX6wvxWFr7D8tlfyMPpsZwJkh/MkJveRrEaKcU0gk8QGmPHnXLAZ3soTThVg==, registry: https://registry.npm.taobao.org/}
+    resolution: {integrity: sha512-7OxcjNEDf9gqFTns0YnXrqPnTRlX6wvxWFr7D8tlfyMPpsZwJkh/MkJveRrEaKcU0gk8QGmPHnXLAZ3soTThVg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npm.taobao.org/vuepress-plugin-reading-progress/-/vuepress-plugin-reading-progress-1.0.10.tgz}
     dev: false
 
   /vuepress-plugin-seo/0.2.0:

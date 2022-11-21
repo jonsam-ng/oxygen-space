@@ -79,7 +79,7 @@ pnpm build
 
 ## 致谢
 
-感谢[VuePress](https://vuepress.vuejs.org/)、[xugaoyi/vuepress-theme-vdoing: 🚀一款简洁高效的VuePress知识管理&博客(blog)主题](https://github.com/xugaoyi/vuepress-theme-vdoing)对本站建站的技术支持。
+感谢[VuePress](https://vuepress.vuejs.org/)、[xugaoyi/vuepress-theme-vdoing](https://github.com/xugaoyi/vuepress-theme-vdoing)对本站建站的技术支持。
 
 ## 许可证
 
